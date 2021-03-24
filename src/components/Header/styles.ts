@@ -14,6 +14,9 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
 
+  img {
+    cursor: pointer;
+  }
   > nav {
     margin-left: 5rem;
     height: 5rem;

@@ -14,7 +14,6 @@ export const Button = styled.button`
   color: ${props => props.theme.colors.white};
   font-weight: bold;
 
-  outline: none;
   transition: filter 0.2s;
 
   svg {
