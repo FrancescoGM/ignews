@@ -5,6 +5,7 @@ import { getPrismicClient } from '../../services/prismic'
 import { Container } from '../../styles/pages/posts'
 import Prismic from '@prismicio/client'
 import { RichText } from 'prismic-dom'
+import Link from 'next/link'
 
 type Post = {
   slug: string
@@ -26,11 +27,13 @@ const Posts: NextPage<PostsProps> = ({ posts }) => {
       <Container>
         <div>
           {posts.map(post => (
-            <a key={post.slug} href={`/posts/${post.slug}`}>
-              <time>{post.updatedAt}</time>
-              <strong>{post.title}</strong>
-              <p>{post.excerpt}</p>
-            </a>
+            <Link key={post.slug} href={`/posts/${post.slug}`}>
+              <a>
+                <time>{post.updatedAt}</time>
+                <strong>{post.title}</strong>
+                <p>{post.excerpt}</p>
+              </a>
+            </Link>
           ))}
         </div>
       </Container>

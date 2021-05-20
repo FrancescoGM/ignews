@@ -1,10 +1,11 @@
-import { GetStaticPaths, GetStaticProps } from 'next'
-import { useSession } from 'next-auth/client'
-import { useRouter } from 'next/dist/client/router'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import { GetStaticPaths, GetStaticProps } from 'next'
+
+import { useSession } from 'next-auth/client'
+import { useRouter } from 'next/router'
 import { RichText } from 'prismic-dom'
-import React, { useEffect } from 'react'
 import { getPrismicClient } from '../../../services/prismic'
 import { Container } from '../../../styles/pages/post'
 

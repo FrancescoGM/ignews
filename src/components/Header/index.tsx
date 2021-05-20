@@ -2,12 +2,9 @@ import React from 'react'
 import Link from 'next/link'
 import { SignInButton } from '../SignInButton'
 import { Container, Content } from './styles'
-import { useRouter } from 'next/dist/client/router'
 import { ActiveLink } from '../ActiveLink'
 
 export const Header: React.FC = () => {
-  const { asPath } = useRouter()
-
   return (
     <Container>
       <Content>
@@ -18,7 +15,7 @@ export const Header: React.FC = () => {
           <ActiveLink activeClassName="active" href="/">
             <a>Home</a>
           </ActiveLink>
-          <ActiveLink activeClassName="active" href="/posts" prefetch>
+          <ActiveLink activeClassName="active" href="/posts">
             <a>Posts</a>
           </ActiveLink>
         </nav>

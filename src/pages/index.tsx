@@ -8,7 +8,7 @@ import { Container, Content } from '../styles/pages/index'
 interface HomeProps {
   product: {
     productId: string
-    amount: number
+    amount: string
   }
 }
 
@@ -28,7 +28,7 @@ export default function Home({ product }: HomeProps) {
             Get access to all the publications <br />
             <span>for {product.amount} month</span>
           </p>
-          <SubscribeButton priceId={product.productId} />
+          <SubscribeButton />
         </Content>
         <img src="/images/avatar.svg" alt="Girl Coding" />
       </Container>

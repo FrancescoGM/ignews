@@ -3,15 +3,9 @@ import { api } from '../../services/api'
 import { signIn, useSession } from 'next-auth/client'
 import { getStripeJs } from '../../services/stripe-js'
 import { Button } from './styles'
-import { useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/router'
 
-interface SubscribeButtonProps {
-  priceId: string
-}
-
-export const SubscribeButton: React.FC<SubscribeButtonProps> = ({
-  priceId
-}) => {
+export const SubscribeButton: React.FC = () => {
   const [session] = useSession()
   const router = useRouter()
 
